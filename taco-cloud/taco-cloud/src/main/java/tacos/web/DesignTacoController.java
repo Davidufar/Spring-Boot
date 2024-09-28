@@ -1,4 +1,4 @@
-package tacos;
+package tacos.web;
 import jakarta.validation.Valid;
 import org.springframework.validation.Errors;
 import java.util.Arrays;
@@ -13,18 +13,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import lombok.extern.slf4j.Slf4j;
-import tacos.Ingredient;
-import tacos.Ingredient.Type;
-import tacos.Taco;
+import tacos.data.JdbcIngredientRepository;
+import tacos.pojo.Ingredient;
+import tacos.pojo.Taco;
+import tacos.pojo.Ingredient.Type;
 @Slf4j
 @Controller
 @RequestMapping("/design")
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
-	private final IngredientRepository ingredientRepo;
-	 @Autowired
+	@Autowired
+	private final JdbcIngredientRepository ingredientRepo;
+	@Autowired 
 	 public DesignTacoController(
-	 IngredientRepository ingredientRepo) {
+	 JdbcIngredientRepository ingredientRepo) {
 	 this.ingredientRepo = ingredientRepo;
 	 }
 	 @ModelAttribute

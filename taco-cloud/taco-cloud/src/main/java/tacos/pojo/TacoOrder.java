@@ -1,4 +1,4 @@
-package tacos;
+package tacos.pojo;
 import jakarta.validation.constraints.Digits;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;

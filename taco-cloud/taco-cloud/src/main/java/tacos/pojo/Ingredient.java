@@ -1,4 +1,4 @@
-package tacos;
+package tacos.pojo;
 import lombok.Data;
 @Data
 public class Ingredient {

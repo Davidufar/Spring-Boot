@@ -1,4 +1,4 @@
-package tacos;
+package tacos.data;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
@@ -7,9 +7,11 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
-import tacos.Ingredient;
+
+import tacos.pojo.Ingredient;
 @Repository
 public class JdbcIngredientRepository implements IngredientRepository {
+	@Autowired
  private JdbcTemplate jdbcTemplate;
  @Autowired
  public JdbcIngredientRepository(JdbcTemplate jdbcTemplate) {

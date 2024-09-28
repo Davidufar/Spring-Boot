@@ -1,4 +1,4 @@
-package tacos;
+package tacos.pojo;
 import java.util.Date;
 import java.util.List;
 import jakarta.validation.constraints.NotNull;

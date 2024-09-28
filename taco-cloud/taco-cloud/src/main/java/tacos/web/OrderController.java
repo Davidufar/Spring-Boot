@@ -1,4 +1,4 @@
-package tacos;
+package tacos.web;
 import org.springframework.stereotype.Controller;
 import jakarta.validation.Valid;
 import org.springframework.validation.Errors;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import lombok.extern.slf4j.Slf4j;
-import tacos.TacoOrder;
+import tacos.pojo.TacoOrder;
 @Slf4j
 @Controller
 @RequestMapping("/orders")
